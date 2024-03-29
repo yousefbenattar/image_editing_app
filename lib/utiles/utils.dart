@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:permission_handler/permission_handler.dart';
 
 Future<bool> requestPermission(Permission permission) async {
@@ -7,7 +5,7 @@ Future<bool> requestPermission(Permission permission) async {
     return true;
   }
   else{
-    var result = permission.request() ;
+    var result =await permission.request() ;
     if(result == PermissionStatus.granted){
       return true;
     }

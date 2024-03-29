@@ -18,7 +18,12 @@ abstract class EditImageViewModel extends State<EditScreen> {
   int currentIndex = 0 ;
   saveToGallery(BuildContext context){
     if(texts.isNotEmpty){
-      screenshotController.capture().then((Uint8List ? image) => saveImage(image!)).catchError((error)=> print(error.toString()));
+      screenshotController.capture().then((Uint8List? image){saveImage(image!);
+        ScaffoldMessenger.of(context).showSnackBar(
+     const SnackBar(content: Text('Image Saved',style: TextStyle(fontSize: 16),))
+    );
+    }
+      ).catchError((error)=> print(error));
     }
   }
   saveImage(Uint8List bytes) async {
