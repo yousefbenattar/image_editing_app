@@ -51,5 +51,7 @@
 	<string>Camera usage</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Mic usage</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>save to galery usage</string>
 </dict>
 </plist>

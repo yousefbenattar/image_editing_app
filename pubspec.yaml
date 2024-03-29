@@ -9,7 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  image_gallery_saver: ^2.0.3
   image_picker: ^1.0.7
+  permission_handler: ^11.3.1
+  screenshot: ^2.3.0
 
 dev_dependencies:
   flutter_test:
